@@ -1,0 +1,4 @@
+SELECT
+  ROUND(SUM(Quantity * UnitPrice)
+        / COUNT(DISTINCT InvoiceNo), 2) AS avg_order_value
+FROM `retail-analytics-478402.retail_analytics.online_retail_cleaned`;

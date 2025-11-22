@@ -1,0 +1,13 @@
+WITH order_counts AS (
+  SELECT
+    CustomerID,
+    COUNT(DISTINCT InvoiceNo) AS orders
+  FROM `retail-analytics-478402.retail_analytics.online_retail_cleaned`
+  GROUP BY CustomerID
+)
+SELECT
+  SUM(CASE WHEN orders = 1 THEN 1 ELSE 0 END) AS one_time_customers,
+  SUM(CASE WHEN orders > 1 THEN 1 ELSE 0 END) AS repeat_customers,
+  ROUND(SUM(CASE WHEN orders > 1 THEN 1 ELSE 0 END) * 100.0 /
+        COUNT(*), 2) AS repeat_customer_pct
+FROM order_counts;

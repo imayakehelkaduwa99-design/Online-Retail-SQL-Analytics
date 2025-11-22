@@ -1,0 +1,9 @@
+SELECT
+  Description AS product_name,
+  Category,
+  SUM(Quantity * UnitPrice) AS revenue,
+  SUM(Quantity) AS total_quantity
+FROM `retail-analytics-478402.retail_analytics.online_retail_cleaned`
+GROUP BY product_name, Category
+ORDER BY revenue DESC
+LIMIT 10;

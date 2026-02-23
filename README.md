@@ -195,25 +195,6 @@ From a business perspective, this analysis supports:
 - **Executive Reporting:**
   The modeled tables and KPIs can be directly plugged into BI tools (Power BI, Looker, Tableau).
 
-
-**Repository Structure**
-├── sql/
-│   ├── monthly_revenue.sql
-│   ├── category_revenue.sql
-│   ├── top_products.sql
-│   ├── repeat_vs_onetime_customers.sql
-│   ├── aov.sql
-│   └── Customer LTV
-│
-├── Online_Retail_Cleaned.xlsx
-├── SQL Analysis Project 1 - Core Results.xlsx
-├── dim_customers.xlsx
-├── dim_products.xlsx
-├── dim_orders.xlsx
-├── dim_order_items.xlsx
-├── Retail Analytics for Project 1.sql
-└── README.md
-
 **Tools & Technologies**
 - SQL (Google BigQuery)
 - Kaggle Dataset
